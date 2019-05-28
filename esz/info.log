@@ -7698,3 +7698,36 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/dist-packages/django/utils/html.py", line 118, in format_html
     return mark_safe(format_string.format(*args_safe, **kwargs_safe))
 KeyError: 'font-family'
+Internal Server Error: /smssign/Pd1zUGtswEDK7kMCj9J5nLC15tzI7jle/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 21, in smssign
+    new_data = new_data.templ.replace('*applicant_fullName*', ContractSignObj.Contract.Number)
+AttributeError: 'str' object has no attribute 'templ'
+Internal Server Error: /smssign/Pd1zUGtswEDK7kMCj9J5nLC15tzI7jle/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 21, in smssign
+    new_data = new_data.replace('*applicant_fullName*', ContractSignObj.Applican.FullName)
+AttributeError: 'ContractSign' object has no attribute 'Applican'
+Internal Server Error: /smssign/Pd1zUGtswEDK7kMCj9J5nLC15tzI7jle/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 21, in smssign
+    new_data = new_data.replace('*applicant_fullName*', ContractSignObj.Applicant.FullName)
+AttributeError: 'ContractSign' object has no attribute 'Applicant'

@@ -17,16 +17,10 @@ def smssign(request, userzign):
     cce_group = Group.objects.get(Program = ContractSignObj.Contract.Program)
     c_templ = ContractTemplates.objects.get(id = '1')
 
-
-    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019.html', 'r') as f:
-        old_data = f.read()
-
-    new_data = old_data.replace('что_меняем', 'на_что_меняем')
-
-    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019-1.html', 'w') as f:
+    new_data = c_templ.templ.replace('*contr_number*', ContractSignObj.Contract.Number)
+    new_data = new_data.replace('*applicant_fullName*', ContractSignObj.Contract.Applicant.FullName)
+    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019-3.html', 'w') as f:
         f.write(new_data)
-
-
 
 #
     if request.method == 'GET':

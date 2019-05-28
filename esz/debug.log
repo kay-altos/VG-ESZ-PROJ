@@ -1,0 +1,1566 @@
+(0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:19:39.787018' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:19:39.787018', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_contract`.`id`, `suddop_contract`.`Date`, `suddop_contract`.`Number`, `suddop_contract`.`Applicant_id`, `suddop_contract`.`Student_id`, `suddop_contract`.`Program_id`, `suddop_contract`.`EducationForm_id`, `suddop_contract`.`LessonBeginDate`, `suddop_contract`.`LessonEndDate`, `suddop_contract`.`MasteringProgramBeginDate`, `suddop_contract`.`MasteringProgramEndDate`, `suddop_contract`.`EducationYear_id`, `suddop_contract`.`ContractStatus_id`, `suddop_contract`.`ContractType_id` FROM `suddop_contract` WHERE `suddop_contract`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_contractstatus`.`id`, `suddop_contractstatus`.`Status`, `suddop_contractstatus`.`LableStatus` FROM `suddop_contractstatus` WHERE `suddop_contractstatus`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'media' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [media] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: extrahead. Contents: [<Variable Node: block.super>, <TextNode: '\n<script type="text/javas'>, <django.template.defaulttags.URLNode object at 0x7f0a63749278>, <TextNode: '"></script>\n'>, <Variable Node: media>, <TextNode: '\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_header' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_header] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: branding. Contents: [<TextNode: '\n<h1 id="site-name"><a hr'>, <django.template.defaulttags.URLNode object at 0x7f0a6375a080>, <TextNode: '">'>, <Variable Node: site_header|default:_('Django administration')>, <TextNode: '</a></h1>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: usertools. Contents: [<TextNode: '\n        '>, <IfNode>, <TextNode: '\n        '>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_view_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_view_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63749d68>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63749e80>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63749ef0>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'add' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [add] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63749d68>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63749e80>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63749ef0>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'original' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [original] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63749d68>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63749e80>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63749ef0>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.003) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd950>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_title. Contents: [<IfNode>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'rs' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rs] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'yYNMwC0PpnK1E9BzSQillhBpBCtx47l0xzucWiz2GQYQ5x144lJeJJ6xAotNV8hz'>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b2550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f57b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content. Contents: [<TextNode: '\n<div id="content-main">\n'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f0a637ac390>, <TextNode: '\n    '>, <IfNode>, <TextNode: '\n  <fieldset class="modul'>, <Variable Node: cNumber>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cApplicant>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cDate>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: сStatus>, <TextNode: '\n\t\t</div>\n\t\t<input type="'>, <Variable Node: contract_id>, <TextNode: '">\n\n\t</fieldset>\n'>, <Variable Node: rs>, <TextNode: '\n    <div class="submit-r'>, <IfNode>, <TextNode: '\n\t\t</div>\n\n  </form>\n\n</d'>]>}]
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.004) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:19:39.942325' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:19:39.942325', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:19:41.926794' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:19:41.926794', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_contract`.`id`, `suddop_contract`.`Date`, `suddop_contract`.`Number`, `suddop_contract`.`Applicant_id`, `suddop_contract`.`Student_id`, `suddop_contract`.`Program_id`, `suddop_contract`.`EducationForm_id`, `suddop_contract`.`LessonBeginDate`, `suddop_contract`.`LessonEndDate`, `suddop_contract`.`MasteringProgramBeginDate`, `suddop_contract`.`MasteringProgramEndDate`, `suddop_contract`.`EducationYear_id`, `suddop_contract`.`ContractStatus_id`, `suddop_contract`.`ContractType_id` FROM `suddop_contract` WHERE `suddop_contract`.`id` = 1; args=(1,)
+(0.007) UPDATE `suddop_contractsign` SET `SignKey` = '81bTcoNDsUxs7IxCHhm8xAhfSkwOnfXT' WHERE `suddop_contractsign`.`Contract_id` = 1; args=('81bTcoNDsUxs7IxCHhm8xAhfSkwOnfXT', 1)
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_contractstatus`.`id`, `suddop_contractstatus`.`Status`, `suddop_contractstatus`.`LableStatus` FROM `suddop_contractstatus` WHERE `suddop_contractstatus`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'media' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [media] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: extrahead. Contents: [<Variable Node: block.super>, <TextNode: '\n<script type="text/javas'>, <django.template.defaulttags.URLNode object at 0x7f0a6349e0f0>, <TextNode: '"></script>\n'>, <Variable Node: media>, <TextNode: '\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_header' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_header] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: branding. Contents: [<TextNode: '\n<h1 id="site-name"><a hr'>, <django.template.defaulttags.URLNode object at 0x7f0a634ab9e8>, <TextNode: '">'>, <Variable Node: site_header|default:_('Django administration')>, <TextNode: '</a></h1>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.004) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: usertools. Contents: [<TextNode: '\n        '>, <IfNode>, <TextNode: '\n        '>]>}]
+(0.007) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.003) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_view_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_view_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a6349eb00>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a6349ec18>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a6349ec88>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'add' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [add] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a6349eb00>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a6349ec18>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a6349ec88>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.004) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'original' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [original] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a6349eb00>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a6349ec18>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a6349ec88>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.004) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a634e3c80>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_title. Contents: [<IfNode>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.004) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'rs' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rs] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: '3hqi9PwdthMFAm6pdQYwo1oLnJzeJOo92S7Izv5qKK0u1KwUplppMtTTmvzuAPkI'>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6347eda0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a636f7710>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content. Contents: [<TextNode: '\n<div id="content-main">\n'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f0a6347eef0>, <TextNode: '\n    '>, <IfNode>, <TextNode: '\n  <fieldset class="modul'>, <Variable Node: cNumber>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cApplicant>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cDate>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: сStatus>, <TextNode: '\n\t\t</div>\n\t\t<input type="'>, <Variable Node: contract_id>, <TextNode: '">\n\n\t</fieldset>\n'>, <Variable Node: rs>, <TextNode: '\n    <div class="submit-r'>, <IfNode>, <TextNode: '\n\t\t</div>\n\n  </form>\n\n</d'>]>}]
+(0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.004) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.004) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:19:42.090059' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:19:42.090059', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:11.546813' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:11.546813', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_contract`.`id`, `suddop_contract`.`Date`, `suddop_contract`.`Number`, `suddop_contract`.`Applicant_id`, `suddop_contract`.`Student_id`, `suddop_contract`.`Program_id`, `suddop_contract`.`EducationForm_id`, `suddop_contract`.`LessonBeginDate`, `suddop_contract`.`LessonEndDate`, `suddop_contract`.`MasteringProgramBeginDate`, `suddop_contract`.`MasteringProgramEndDate`, `suddop_contract`.`EducationYear_id`, `suddop_contract`.`ContractStatus_id`, `suddop_contract`.`ContractType_id` FROM `suddop_contract` WHERE `suddop_contract`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_contractstatus`.`id`, `suddop_contractstatus`.`Status`, `suddop_contractstatus`.`LableStatus` FROM `suddop_contractstatus` WHERE `suddop_contractstatus`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'media' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [media] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: extrahead. Contents: [<Variable Node: block.super>, <TextNode: '\n<script type="text/javas'>, <django.template.defaulttags.URLNode object at 0x7f0a637472b0>, <TextNode: '"></script>\n'>, <Variable Node: media>, <TextNode: '\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_header' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_header] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: branding. Contents: [<TextNode: '\n<h1 id="site-name"><a hr'>, <django.template.defaulttags.URLNode object at 0x7f0a637590b8>, <TextNode: '">'>, <Variable Node: site_header|default:_('Django administration')>, <TextNode: '</a></h1>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: usertools. Contents: [<TextNode: '\n        '>, <IfNode>, <TextNode: '\n        '>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_view_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_view_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63747da0>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63747eb8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63747f28>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'add' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [add] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63747da0>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63747eb8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63747f28>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'original' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [original] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63747da0>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a63747eb8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63747f28>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.003) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637de8c8>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_title. Contents: [<IfNode>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'rs' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rs] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'FwWEtwtb06HkX0AG6YHr2K3Bx549yRZsE7D4Tc2ohzV9oo0bit8kqcyJwR4ppSV1'>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a637b1588>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a638f47f0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content. Contents: [<TextNode: '\n<div id="content-main">\n'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f0a637ab3c8>, <TextNode: '\n    '>, <IfNode>, <TextNode: '\n  <fieldset class="modul'>, <Variable Node: cNumber>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cApplicant>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cDate>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: сStatus>, <TextNode: '\n\t\t</div>\n\t\t<input type="'>, <Variable Node: contract_id>, <TextNode: '">\n\n\t</fieldset>\n'>, <Variable Node: rs>, <TextNode: '\n    <div class="submit-r'>, <IfNode>, <TextNode: '\n\t\t</div>\n\n  </form>\n\n</d'>]>}]
+(0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.000) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:11.705062' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:11.705062', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:13.813096' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:13.813096', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.000) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_contract`.`id`, `suddop_contract`.`Date`, `suddop_contract`.`Number`, `suddop_contract`.`Applicant_id`, `suddop_contract`.`Student_id`, `suddop_contract`.`Program_id`, `suddop_contract`.`EducationForm_id`, `suddop_contract`.`LessonBeginDate`, `suddop_contract`.`LessonEndDate`, `suddop_contract`.`MasteringProgramBeginDate`, `suddop_contract`.`MasteringProgramEndDate`, `suddop_contract`.`EducationYear_id`, `suddop_contract`.`ContractStatus_id`, `suddop_contract`.`ContractType_id` FROM `suddop_contract` WHERE `suddop_contract`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.004) SELECT `suddop_contractstatus`.`id`, `suddop_contractstatus`.`Status`, `suddop_contractstatus`.`LableStatus` FROM `suddop_contractstatus` WHERE `suddop_contractstatus`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'media' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [media] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: extrahead. Contents: [<Variable Node: block.super>, <TextNode: '\n<script type="text/javas'>, <django.template.defaulttags.URLNode object at 0x7f0a63771198>, <TextNode: '"></script>\n'>, <Variable Node: media>, <TextNode: '\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.005) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_header' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_header] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: branding. Contents: [<TextNode: '\n<h1 id="site-name"><a hr'>, <django.template.defaulttags.URLNode object at 0x7f0a637556a0>, <TextNode: '">'>, <Variable Node: site_header|default:_('Django administration')>, <TextNode: '</a></h1>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: usertools. Contents: [<TextNode: '\n        '>, <IfNode>, <TextNode: '\n        '>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_view_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_view_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63771860>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a637713c8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63771400>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.004) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'add' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [add] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63771860>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a637713c8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63771400>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'original' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [original] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a63771860>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a637713c8>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a63771400>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.004) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a6372ef28>>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_title. Contents: [<IfNode>]>}]
+(0.003) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.003) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.005) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'rs' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rs] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'XcfeOcJ749MKsfTpz4abvxTf2vu6ow2IWNWEeSiklC0zTDjULzB4TZon1humfxYh'>, 'request': <WSGIRequest: GET '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a636fa278>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a6379dda0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content. Contents: [<TextNode: '\n<div id="content-main">\n'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f0a636fa3c8>, <TextNode: '\n    '>, <IfNode>, <TextNode: '\n  <fieldset class="modul'>, <Variable Node: cNumber>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cApplicant>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cDate>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: сStatus>, <TextNode: '\n\t\t</div>\n\t\t<input type="'>, <Variable Node: contract_id>, <TextNode: '">\n\n\t</fieldset>\n'>, <Variable Node: rs>, <TextNode: '\n    <div class="submit-r'>, <IfNode>, <TextNode: '\n\t\t</div>\n\n  </form>\n\n</d'>]>}]
+(0.000) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:13.925213' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:13.925213', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.003) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.001) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:23.199404' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:23.199404', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_contract`.`id`, `suddop_contract`.`Date`, `suddop_contract`.`Number`, `suddop_contract`.`Applicant_id`, `suddop_contract`.`Student_id`, `suddop_contract`.`Program_id`, `suddop_contract`.`EducationForm_id`, `suddop_contract`.`LessonBeginDate`, `suddop_contract`.`LessonEndDate`, `suddop_contract`.`MasteringProgramBeginDate`, `suddop_contract`.`MasteringProgramEndDate`, `suddop_contract`.`EducationYear_id`, `suddop_contract`.`ContractStatus_id`, `suddop_contract`.`ContractType_id` FROM `suddop_contract` WHERE `suddop_contract`.`id` = 1; args=(1,)
+(0.009) UPDATE `suddop_contractsign` SET `SignKey` = 'MAZZLFyaIgd2XHEYMH4D3nlK5W9DUKAh' WHERE `suddop_contractsign`.`Contract_id` = 1; args=('MAZZLFyaIgd2XHEYMH4D3nlK5W9DUKAh', 1)
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_contractstatus`.`id`, `suddop_contractstatus`.`Status`, `suddop_contractstatus`.`LableStatus` FROM `suddop_contractstatus` WHERE `suddop_contractstatus`.`id` = 1; args=(1,)
+(0.005) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: title. Contents: [<Variable Node: title>, <TextNode: ' | '>, <Variable Node: site_title|default:_('Django site admin')>]>}]
+(0.007) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'media' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'media'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [media] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: extrahead. Contents: [<Variable Node: block.super>, <TextNode: '\n<script type="text/javas'>, <django.template.defaulttags.URLNode object at 0x7f0a634a78d0>, <TextNode: '"></script>\n'>, <Variable Node: media>, <TextNode: '\n'>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'site_header' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'site_header'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [site_header] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: branding. Contents: [<TextNode: '\n<h1 id="site-name"><a hr'>, <django.template.defaulttags.URLNode object at 0x7f0a6349d588>, <TextNode: '">'>, <Variable Node: site_header|default:_('Django administration')>, <TextNode: '</a></h1>\n'>]>}]
+(0.004) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: usertools. Contents: [<TextNode: '\n        '>, <IfNode>, <TextNode: '\n        '>]>}]
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'has_view_permission' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'has_view_permission'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [has_view_permission] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a634aba20>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a634aba58>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a634abc18>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.000) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'add' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'add'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [add] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a634aba20>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a634aba58>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a634abc18>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'original' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'original'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [original] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: breadcrumbs. Contents: [<TextNode: '\n<div class="breadcrumbs"'>, <django.template.defaulttags.URLNode object at 0x7f0a634aba20>, <TextNode: '">'>, <django.templatetags.i18n.TranslateNode object at 0x7f0a634aba58>, <TextNode: '</a>\n&rsaquo; <a href="'>, <django.template.defaulttags.URLNode object at 0x7f0a634abc18>, <TextNode: '">'>, <Variable Node: opts.app_config.verbose_name>, <TextNode: '</a>\n&rsaquo; '>, <IfNode>, <TextNode: '\n&rsaquo; '>, <IfNode>, <TextNode: '\n</div>\n'>]>}]
+(0.000) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'title' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [title] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7f0a637dd8c8>>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content_title. Contents: [<IfNode>]>}]
+(0.001) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+(0.002) SELECT `suddop_applicant`.`id`, `suddop_applicant`.`FirstName`, `suddop_applicant`.`LastName`, `suddop_applicant`.`Patronymic`, `suddop_applicant`.`FullName`, `suddop_applicant`.`ApplicantSnils`, `suddop_applicant`.`ApplicantEmail`, `suddop_applicant`.`ApplicantPhone` FROM `suddop_applicant` WHERE `suddop_applicant`.`id` = 1; args=(1,)
+(0.001) SELECT `suddop_applicantpassport`.`Applicant_id`, `suddop_applicantpassport`.`ApplicantDocWhomWhenIssued`, `suddop_applicantpassport`.`ApplicantAddress`, `suddop_applicantpassport`.`SerialPaspDoc`, `suddop_applicantpassport`.`NumPaspDoc`, `suddop_applicantpassport`.`DataOutDoc` FROM `suddop_applicantpassport` WHERE `suddop_applicantpassport`.`Applicant_id` = 1; args=(1,)
+Exception while resolving variable 'rs' in template 'smssign/index.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "/usr/local/lib/python3.6/dist-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'rs'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [rs] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'v6PL5fpYkINfaHwtKeY1WwSUpGUQbKzguHwbvVYbBb14B5WYWJpUkYn2osU62LvP'>, 'request': <WSGIRequest: POST '/admin/suddop/contract/signsms/1'>, 'user': <SimpleLazyObject: <User: root>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0a6362b908>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0a63448e80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <class 'suddop.forms.ContractSignForm'>, 'opts': <Options for ContractSign>, 'change': True, 'is_popup': False, 'save_as': False, 'has_delete_permission': False, 'has_add_permission': False, 'has_change_permission': False, 'contract_id': '1', 'cNumber': '1234567', 'cApplicant': <Applicant: Иванов Иван Иванович, Паспорт - Серия: 1111, Номер: 222222>, 'cDate': datetime.date(2019, 5, 6), 'сStatus': <ContractStatus: Не подписан>, 'LANGUAGE_CODE': 'ru-RU', 'LANGUAGE_BIDI': False}, {'block': <Block Node: content. Contents: [<TextNode: '\n<div id="content-main">\n'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f0a6347e860>, <TextNode: '\n    '>, <IfNode>, <TextNode: '\n  <fieldset class="modul'>, <Variable Node: cNumber>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cApplicant>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: cDate>, <TextNode: '\n\t\t</div>\n\t\t<div class="f'>, <Variable Node: сStatus>, <TextNode: '\n\t\t</div>\n\t\t<input type="'>, <Variable Node: contract_id>, <TextNode: '">\n\n\t</fieldset>\n'>, <Variable Node: rs>, <TextNode: '\n    <div class="submit-r'>, <IfNode>, <TextNode: '\n\t\t</div>\n\n  </form>\n\n</d'>]>}]
+(0.004) SELECT @@SQL_AUTO_IS_NULL; args=None
+(0.003) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+(0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2019-05-07 10:20:23.336981' AND `django_session`.`session_key` = 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj'); args=('2019-05-07 10:20:23.336981', 'zv00lvajyr7nwfnmvcc2wqt9ii2nj5gj')
+(0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)

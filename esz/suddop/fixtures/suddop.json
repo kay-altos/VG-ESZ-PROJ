@@ -1,0 +1,236 @@
+[
+  {
+    "model": "suddop.SendSmsTransactionState",
+    "pk": 1,
+    "fields": {
+      "SatateLabel": "Задание поставлено в очередь на обработку"
+    }
+  },
+  {
+    "model": "suddop.SendSmsTransactionState",
+    "pk": 2,
+    "fields": {
+      "SatateLabel": "Сообщение отправлено"
+    }
+  },
+  {
+    "model": "suddop.SendSmsTransactionState",
+    "pk": 3,
+    "fields": {
+      "SatateLabel": "Сообщение доставлено"
+    }
+  },
+  {
+    "model": "suddop.SendSmsTransactionState",
+    "pk": 99,
+    "fields": {
+      "SatateLabel": "Возникла ошибка. Подробности в логе."
+    }
+  },
+  {
+    "model": "staicsitecontent.ContractType",
+    "pk": 1,
+    "fields": {
+      "Type": "Тип 1"
+    }
+  },
+  {
+    "model": "suddop.ContractStatus",
+    "pk": 1,
+    "fields": {
+      "Status": "Статус 1"
+    }
+  },
+  {
+    "model": "staicsitecontent.Center",
+    "pk": 1,
+    "fields": {
+      "Name": "Центр технического образования",
+      "ShortName": "ЦТО",
+      "Description": "ЦТО",
+      "Code": "101",
+      "Address": "Косыгина 17"
+    }
+  },
+  {
+    "model": "staicsitecontent.Center",
+    "pk": 2,
+    "fields": {
+      "Name": "Центр художественного образования",
+      "ShortName": "ЦХО",
+      "Description": "ЦХО",
+      "Code": "102",
+      "Address": "Косыгина 17"
+    }
+  },
+  {
+    "model": "staicsitecontent.Center",
+    "pk": 3,
+    "fields": {
+      "Name": "Ансамбль песни и пляски имени В.С. Локтева",
+      "ShortName": "Ансамбль Локтева",
+      "Description": "Ансамбль Локтева",
+      "Code": "103",
+      "Address": "Косыгина 17"
+    }
+  },
+  {
+    "model": "staicsitecontent.EducationForm",
+    "pk": 1,
+    "fields": {
+      "EducationForm": "Очная"
+    }
+  },
+  {
+    "model": "staicsitecontent.EducationForm",
+    "pk": 2,
+    "fields": {
+      "EducationForm": "Очно-заочная"
+    }
+  },
+  {
+    "model": "staicsitecontent.EducationYear",
+    "pk": 1,
+    "fields": {
+      "EducationYear": "2019"
+    }
+  },
+  {
+    "model": "staicsitecontent.EducationYear",
+    "pk": 2,
+    "fields": {
+      "EducationYear": "2020"
+    }
+  },
+  {
+    "model": "staicsitecontent.Program",
+    "pk": 1,
+    "fields": {
+      "Name": "Программа ЦТО 1",
+      "ShortName": "ЦТО 1",
+      "Description": "ЦТО 1",
+      "Code": "10101",
+      "Center": "1"
+    }
+  },
+  {
+    "model": "staicsitecontent.Teacher",
+    "pk": 1,
+    "fields": {
+      "FullName": "Акимов Александр Олегович",
+      "ProgramLeadsTeacher": "1"
+    }
+  },
+   {
+      "model":"suddop.applicant",
+      "pk":1,
+      "fields":{
+         "FirstName":"\u0421\u0442\u0435\u043f\u0430\u043d\u043e\u0432",
+         "LastName":"\u0421\u0442\u0435\u043f\u0430\u043d",
+         "Patronymic":"\u041e\u043b\u0435\u0433\u043e\u0432\u0438\u0447",
+         "FullName":"\u0421\u0442\u0435\u043f\u0430\u043d\u043e\u0432 \u0421\u0442\u0435\u043f\u0430\u043d \u041e\u043b\u0435\u0433\u043e\u0432\u0438\u0447",
+         "ApplicantSnils":"58458647475",
+         "ApplicantEmail":"",
+         "ApplicantPhone":""
+      }
+   },
+   {
+      "model":"suddop.applicantemails",
+      "pk":1,
+      "fields":{
+         "Email":"xz8j1x@gmail.com"
+      }
+   },
+   {
+      "model":"suddop.applicantphones",
+      "pk":1,
+      "fields":{
+         "Phone":"+7(903)689-34-61"
+      }
+   },
+   {
+      "model":"suddop.applicantpassport",
+      "pk":1,
+      "fields":{
+         "ApplicantDocWhomWhenIssued":"\u041e\u0442\u0434\u0435\u043b\u043e\u043c \u0423\u0424\u041c\u0421 \u0420\u043e\u0441\u0441\u0438\u0438 \u043f\u043e \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u0441\u043a\u043e\u0439 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u043f\u043e \u0433\u043e\u0440\u043e\u0434\u0441\u043a\u043e\u043c\u0443 \u043e\u043a\u0440\u0443\u0433\u0443 \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0435\u0446",
+         "ApplicantAddress":"\u0433. \u0413\u043e\u0440\u043e\u0445\u043e\u0432\u0435\u0446",
+         "SerialPaspDoc":"2942",
+         "NumPaspDoc":"522948",
+         "DataOutDoc":"2018-07-31"
+      }
+   },
+   {
+      "model":"staicsitecontent.student",
+      "pk":1,
+      "fields":{
+         "Name":"\u0421\u0442\u0435\u043f\u0430\u043d\u043e\u0432 \u0421\u0442\u0435\u043f\u0430\u043d \u0421\u0442\u0435\u043f\u0430\u043d\u043e\u0432\u0438\u0447",
+         "DateBirth":"2014-05-08",
+         "Group":[
+            1
+         ]
+      }
+   },
+   {
+      "model":"staicsitecontent.gender",
+      "pk":1,
+      "fields":{
+         "GenderLabel":"\u041c"
+      }
+   },
+   {
+      "model":"staicsitecontent.studentdocs",
+      "pk":1,
+      "fields":{
+         "SeriaNumDoc":"10101010101",
+         "DatarRegDoc":"2017-05-08"
+      }
+   },
+   {
+      "model":"suddop.contract",
+      "pk":1,
+      "fields":{
+         "Date":"2019-05-08",
+         "Number":"\u0414\u0411\u041d15469",
+         "Applicant":1,
+         "Student":1,
+         "Program":1,
+         "EducationForm":1,
+         "LessonBeginDate":"2019-05-08",
+         "LessonEndDate":"2019-05-08",
+         "MasteringProgramBeginDate":"2019-05-08",
+         "MasteringProgramEndDate":"2019-05-08",
+         "EducationYear":1,
+         "ContractStatus":null,
+         "ContractType":1
+      }
+   },
+   {
+      "model":"suddop.sendsmstransactionstate",
+      "pk":1,
+      "fields":{
+         "SatateLabel":"\u0417\u0430\u0434\u0430\u043d\u0438\u0435 \u043f\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043e \u0432 \u043e\u0447\u0435\u0440\u0435\u0434\u044c \u043d\u0430 \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0443"
+      }
+   },
+   {
+      "model":"suddop.sendsmstransactionstate",
+      "pk":2,
+      "fields":{
+         "SatateLabel":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e"
+      }
+   },
+   {
+      "model":"suddop.sendsmstransactionstate",
+      "pk":3,
+      "fields":{
+         "SatateLabel":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0434\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043e"
+      }
+   },
+   {
+      "model":"suddop.sendsmstransactionstate",
+      "pk":99,
+      "fields":{
+         "SatateLabel":"\u0412\u043e\u0437\u043d\u0438\u043a\u043b\u0430 \u043e\u0448\u0438\u0431\u043a\u0430. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u0432 \u043b\u043e\u0433\u0435."
+      }
+   }
+
+]

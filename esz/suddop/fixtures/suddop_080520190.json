@@ -1,0 +1,27 @@
+[
+  {
+    "model": "suddop.SendEmailTransactionState",
+    "pk": 1,
+    "fields": {
+      "SatateLabel": "Задание поставлено в очередь на обработку"
+    }
+  },{
+    "model": "suddop.SendEmailTransactionState",
+    "pk": 2,
+    "fields": {
+      "SatateLabel": "Сообщение отправлено"
+    }
+  },{
+    "model": "suddop.SendEmailTransactionState",
+    "pk": 3,
+    "fields": {
+      "SatateLabel": "Сообщение доставлено"
+    }
+  },{
+    "model": "suddop.SendEmailTransactionState",
+    "pk": 99,
+    "fields": {
+      "SatateLabel": "Возникла ошибка. Подробности в логе."
+    }
+  }
+]

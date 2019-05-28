@@ -7,6 +7,9 @@ from django.conf import settings
 
 # Create your models here.
 #
+class ContractTemplates(models.Model):
+    templ = models.TextField()
+
 class Role(models.Model):
     RoleName = models.CharField(max_length=30)
     RoleLabel = models.CharField(max_length=30)

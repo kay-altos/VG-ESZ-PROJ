@@ -15,6 +15,19 @@ def smssign(request, userzign):
     ApplicantPassp = ApplicantPassport.objects.get(Applicant = ContractSignObj.Contract.Applicant)
     page_greeting = SuddopConstants.objects.get(SConstName = 'sms_sign_page_greeting')
     cce_group = Group.objects.get(Program = ContractSignObj.Contract.Program)
+    c_templ = ContractTemplates.objects.get(id = '1')
+
+
+    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019.html', 'r') as f:
+        old_data = f.read()
+
+    new_data = old_data.replace('что_меняем', 'на_что_меняем')
+
+    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019-1.html', 'w') as f:
+        f.write(new_data)
+
+
+
 #
     if request.method == 'GET':
         if csitr.ContractSignTransactionState == ContractSignTransactionState.objects.get(id=98):
@@ -33,6 +46,7 @@ def smssign(request, userzign):
             'ApplicantPhone' : ApplicantPhone,
             'ApplicantPassp' : ApplicantPassp,
             'SmsCode' : ContractSignObj.SmsCode,
+            #'c_templ' : format_html(c_templ.templ),
             'ContractSignTransactionState' : csitr.ContractSignTransactionState
     }
 #

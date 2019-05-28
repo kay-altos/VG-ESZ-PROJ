@@ -61,6 +61,7 @@
                            <p style="text-align:center"><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:18px"><strong>Сведения о будущем обучающемся<br />
                               (строго согласно документу, удостоверяющему личность)</strong></span></span>
                            </p>
+
                            <student-edit></student-edit>
                            <hr />
                         </fieldset>
@@ -71,7 +72,9 @@
 
 
                         <div id="contract-list">
-                          <contract-form></contract-form>
+
+{{ c_templ }}
+
                         </div>
 
                      </tab-content>
@@ -118,44 +121,17 @@
          });
 
 
-         Vue.component('contract-form', {
+         Vue.component('contract-form', function(resolve, reject){
           delimiters: ['_{', '}'],
-          created: function () {
-                  //alert('{{graphId}}');
-                  this.ggg();
-              },
 
-              data() {
-                return {
-                dd: '',
-              }
-            },
-              template:' _{ dd } ',
-              methods: {
-                ggg: function(){
-                  axios.get('../../templates/smssign/contract_vn_08_04_2019.htm')
-                    .then(function (response) {
-                      // handle success
-                      //resolve({template: response.data});
-                      this.dd = response.data;
-                      console.log(this.dd);
-                    })
-                    .catch(function (error) {
-                      // handle error
-                      console.log(error);
-                    })
-                    .finally(function () {
-                      // always executed
-                    });
-
-                }
-
-
-              }
+ axios.get("http://dev.esz.dvorec.net/static/tmpls/contract_vn_08_04_2019.html").then(response => {
+    resolve({template: response.data})
+  })
 
 
 
-         })
+
+        });
 
 
          Vue.component('student-edit', {

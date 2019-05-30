@@ -6,8 +6,12 @@ import random
 import json
 from django.http import JsonResponse
 from django.utils.html import format_html
+import pdfkit
+import datetime
+
 # Create your views here.
 def smssign(request, userzign):
+
     ContractSignObj = ContractSign.objects.get(SignKey = userzign)
     csitr = ContractSignTransaction.objects.get(Contract = ContractSignObj.Contract)
     ApplicantEmail = ApplicantEmails.objects.get(Applicant = ContractSignObj.Contract.Applicant)
@@ -19,9 +23,28 @@ def smssign(request, userzign):
 
     new_data = c_templ.templ.replace('*contr_number*', ContractSignObj.Contract.Number)
     new_data = new_data.replace('*applicant_fullName*', ContractSignObj.Contract.Applicant.FullName)
-    with open ('/var/www/html/esz/esz/static/tmpls/contract_vn_08_04_2019-3.html', 'w') as f:
-        f.write(new_data)
+    new_data = new_data.replace('*organization_pred*', "Мельвель Елены Хасыновны")
+    new_data = new_data.replace('*organization_pred_prikaz*', "Приказ № 123564")
+    new_data = new_data.replace('*contr_applicant_gender_postfix*', "ый")
+    new_data = new_data.replace('*contr_student_gender_postfix*', "ый")
+    new_data = new_data.replace('*student_fullname*', ContractSignObj.Contract.Student.Name)
+    #.strftime('«%d» %B %Y г.')
+    latdate = ContractSignObj.Contract.Date.strftime('«%d» %B %Y г.')
+    dateru =  latdate.replace('May', 'Мая')
+    new_data = new_data.replace('*contr_date*', dateru)
 
+
+
+
+
+    contr_name = '/var/www/html/esz/esz/static/tmpls/%s.html' % (userzign)
+    with open (contr_name, 'w') as f:
+        f.write(new_data)
+    '''
+    with open ('/var/www/html/esz/esz/static/tmpls/contr_tpl.mht', 'w') as f:
+        f.write(new_data)
+    pdfkit.from_url('/var/www/html/esz/esz/static/tmpls/contr_tpl.mhtl', '/var/www/html/esz/esz/static/tmpls/out.pdf')
+'''
 #
     if request.method == 'GET':
         if csitr.ContractSignTransactionState == ContractSignTransactionState.objects.get(id=98):

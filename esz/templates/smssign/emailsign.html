@@ -11,7 +11,7 @@
                      <tab-content title="Ознакомление" icon="ti-user">
                         <fieldset>
                            <hr />
-                           <h1><span style="font-family:Arial,Helvetica,sans-serif">Здравствуйте, {{ ContractObj.Contract.Applicant.FullName }}!</span></h1>
+                           <h1><span style="font-family:Arial,Helvetica,sans-serif">Здравствуйте,  ${ applicantFullname } !</span></h1>
                            {{ page_greeting }}
 
                            <p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px"><strong>Сведения о программе</strong></span></span></p>
@@ -333,7 +333,7 @@
                  })
                     .then((response) => {
                       console.log(response);
-                     window.location.href = window.location.href;
+                    // window.location.href = window.location.href;
 
                     })
                     .catch((error) => {
@@ -586,6 +586,8 @@
        saveEdit: function(){
          // However we want to save it to the database
          this.applicantFullname = this.tempApplicantFullname;
+         this.$parent.$data.applicantFullname =  this.applicantFullname;
+         this.$parent.applicantFullname =  this.applicantFullname;
          this.applicantphone = this.tempApplicantphone;
          this.applicantemail = this.tempApplicantemail;
 
@@ -613,7 +615,7 @@
            .then((response) => {
 
              console.log(response);
-             window.location.href = window.location.href;
+             //window.location.href = window.location.href;
            })
            .catch((error) => {
              console.log(error);
@@ -644,6 +646,7 @@
       console.log(currentUrl);
       },
       data: {
+        applicantFullname: '{{ ContractObj.Contract.Applicant.FullName }}',
         value: 'Click Me!',
       scrld: false,
       results: [],

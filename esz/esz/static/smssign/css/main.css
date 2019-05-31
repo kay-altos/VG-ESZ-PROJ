@@ -78,7 +78,15 @@ background-color:  #F3F3F3 !important;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
+.contr-sogl-elem{
+  border-width: 6px;
+  border-color: #4395D1;
+  border-style: double;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+}
 #contract-list{
   border-width: 6px;
   border-color: #4395D1;
@@ -87,5 +95,12 @@ background-color:  #F3F3F3 !important;
   min-height: 100px;
   padding: 10px;
 
+
+}
+.form-check-label{
+font-weight: bold;
+}
+.card{
+  margin-top: 5px;
 
 }

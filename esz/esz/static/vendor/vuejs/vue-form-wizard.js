@@ -137,14 +137,24 @@
                     removeTab: this.removeTab
                 }
             },
+
             data: function() {
                 return {
                     activeTabIndex: 0,
                     currentPercentage: 0,
                     maxStep: 0,
+                    sIndex: '',
                     loading: !1,
                     tabs: []
                 }
+            },
+            mounted: function() {
+              if (localStorage.sIndex) {
+                this.sIndex = localStorage.sIndex;
+              }else{
+                  sIndex = 0;
+
+              }
             },
             computed: {
                 slotProps: function() {
@@ -226,14 +236,21 @@
                 nextTab: function() {
                     var t = this,
                         e = function() {
-                            t.activeTabIndex < t.tabCount - 1 ? (t.changeTab(t.activeTabIndex, t.activeTabIndex + 1), t.afterTabChange(t.activeTabIndex)) : t.$emit("on-complete")
+                            t.activeTabIndex < t.tabCount - 1 ? (t.changeTab(t.activeTabIndex, t.activeTabIndex + 1), t.afterTabChange(t.activeTabIndex)) : t.$emit("on-complete");
+
+                          //  localStorage.removeItem('sIndex');
+                          //  localStorage.sIndex = t.activeTabIndex;
+                          //  console.log(t.activeTabIndex);
                         };
                     this.beforeTabChange(this.activeTabIndex, e)
                 },
                 prevTab: function() {
                     var t = this,
                         e = function() {
-                            t.activeTabIndex > 0 && (t.setValidationError(null), t.changeTab(t.activeTabIndex, t.activeTabIndex - 1))
+                            t.activeTabIndex > 0 && (t.setValidationError(null), t.changeTab(t.activeTabIndex, t.activeTabIndex - 1));
+                            //localStorage.removeItem('sIndex');
+                            //localStorage.sIndex = t.activeTabIndex;
+                            //console.log(t.activeTabIndex);
                         };
                     this.validateOnBack ? this.beforeTabChange(this.activeTabIndex, e) : e()
                 },

@@ -7932,3 +7932,362 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py", line 1243, in to_python
     params={'value': value},
 django.core.exceptions.ValidationError: ["Значение '' имеет неверный формат даты. Оно должно быть в формате YYYY-MM-DD."]
+Internal Server Error: /smssign/K8jq835f4c0LwaVnljtebcQlQU048DHx/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 15, in smssign
+    ContractSignObj = ContractSign.objects.get(SignKey = userzign)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+suddop.models.ContractSign.DoesNotExist: ContractSign matching query does not exist.
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 42, in smssign
+    with open (contr_name, 'w') as f: f.write(new_data)
+PermissionError: [Errno 13] Permission denied: '/var/www/html/esz/esz/static/tmpls/htmltplcontracts/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn.html'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 42, in smssign
+    tmp, new_data = new_data, tmp.replace(key, val)
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 42, in smssign
+    tmp, new_data = tmp.replace(key, val), new_data
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 42, in smssign
+    tmp, new_data = tmp.replace(key, val), new_data
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 40, in smssign
+    tmp = new_data = tmp.replace(key, val)
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 40, in smssign
+    #tmp = new_data
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 42, in smssign
+    tmp, new_data = new_data, tmp.replace(key, val)
+UnboundLocalError: local variable 'tmp' referenced before assignment
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 37, in smssign
+    '*applicant_psp_WhomWhenIssue*': ApplicantPassp.ApplicantDocWhomWhenIssue,
+AttributeError: 'ApplicantPassport' object has no attribute 'ApplicantDocWhomWhenIssue'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 46, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 26, in smssign
+    student_Birth_ru = student_Birth.replace('May', 'Мая')
+TypeError: an integer is required (got type str)
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 26, in smssign
+    student_Birth_ru = student_Birth.replace('May', 'Мая')
+TypeError: an integer is required (got type str)
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 47, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 47, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 46, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 46, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 46, in smssign
+    new_data = tmp.replace(key, val)
+TypeError: replace() argument 2 must be str, not datetime.date
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 103, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 41, in contract_form_generate
+    '*applicant_psp_DataOut*': ApplicantPassp.DataOutDoc.strftime('«%d» %B %Y г.'),
+AttributeError: 'str' object has no attribute 'strftime'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 62, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 28, in contract_form_generate
+    latdate = ContractSignObj.Contract.Date.strftime('«%d» %B %Y г.')
+NameError: name 'ContractSignObj' is not defined
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 62, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 28, in contract_form_generate
+    latdate = ContractSignObj.Contract.Date.strftime('«%d» %B %Y г.')
+NameError: name 'ContractSignObj' is not defined
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 111, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 48, in contract_form_generate
+    '*applicant_psp_DataOut*': ApplicantPassp.DataOutDoc.strftime('«%d» %B %Y г.'),
+AttributeError: 'str' object has no attribute 'strftime'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 108, in smssign
+    stdnt.DocumentType = body['DocumentType']
+KeyError: 'DocumentType'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 108, in smssign
+    stdnt.DocumentType = body['DocumentType']
+KeyError: 'DocumentType'
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 62, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 44, in contract_form_generate
+    '*student_Birth*': _date(ContractSignObj.Contract.Student.DateBirth, "«d» B Y"),
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaultfilters.py", line 701, in date
+    return formats.date_format(value, arg)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/formats.py", line 152, in date_format
+    return dateformat.format(value, get_format(format or 'DATE_FORMAT', use_l10n=use_l10n))
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/dateformat.py", line 361, in format
+    return df.format(format_string)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/dateformat.py", line 36, in format
+    "time-related format specifiers (found '%s')." % piece
+TypeError: The format for date objects may not contain time-related format specifiers (found 'B').
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 62, in smssign
+    contract_form_generate()
+  File "/var/www/html/esz/smssign/views.py", line 44, in contract_form_generate
+    '*student_Birth*': _date(ContractSignObj.Contract.Student.DateBirth, "d B Y"),
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaultfilters.py", line 701, in date
+    return formats.date_format(value, arg)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/formats.py", line 152, in date_format
+    return dateformat.format(value, get_format(format or 'DATE_FORMAT', use_l10n=use_l10n))
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/dateformat.py", line 361, in format
+    return df.format(format_string)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/dateformat.py", line 36, in format
+    "time-related format specifiers (found '%s')." % piece
+TypeError: The format for date objects may not contain time-related format specifiers (found 'B').
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 15, in smssign
+    ContractSignObj = ContractSign.objects.get(SignKey = userzign)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+suddop.models.ContractSign.DoesNotExist: ContractSign matching query does not exist.
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 15, in smssign
+    ContractSignObj = ContractSign.objects.get(SignKey = userzign)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+suddop.models.ContractSign.DoesNotExist: ContractSign matching query does not exist.
+Internal Server Error: /smssign/PfbEvcpouf1i4GotFjzMAtqgR4gAzEZn/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/www/html/esz/smssign/views.py", line 15, in smssign
+    ContractSignObj = ContractSign.objects.get(SignKey = userzign)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 408, in get
+    self.model._meta.object_name
+suddop.models.ContractSign.DoesNotExist: ContractSign matching query does not exist.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico

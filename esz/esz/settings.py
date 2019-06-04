@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'mainpage',
     'suddop',
     'staicsitecontent',
+    'rest_framework',
     'django_extensions',
 
 ]

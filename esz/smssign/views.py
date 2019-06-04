@@ -9,6 +9,16 @@ from django.utils.html import format_html
 import pdfkit
 from django.template.defaultfilters import date as _date
 from datetime import datetime
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import ContractSerializer
+
+#
+class ContractView(APIView):
+    def get(self, request):
+        Contract1 = Contract.objects.all()
+        serializer = ContractSerializer(Contract1, many=True)
+        return Response({"Contract": serializer.data})
 
 # Create your views here.
 def smssign(request, userzign):
@@ -20,7 +30,6 @@ def smssign(request, userzign):
     page_greeting = SuddopConstants.objects.get(SConstName = 'sms_sign_page_greeting')
     cce_group = Group.objects.get(Program = ContractSignObj.Contract.Program)
 #
-
 #
     def contract_form_generate():
         c_templ = ContractTemplates.objects.get(id = '1')

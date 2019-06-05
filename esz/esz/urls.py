@@ -23,7 +23,8 @@ urlpatterns = [
     path('', include('mainpage.urls')),
 	path('centers/', include('mainpage.urls')),
     path('test/', include('suddop.urls')),
-    path('smssign/', include('smssign.urls')),
     path('api/', include('smssign.urls')),
+    path('smssign/', include('smssign.urls')),
+
 
 ]

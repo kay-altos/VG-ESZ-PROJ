@@ -11,14 +11,31 @@ from django.template.defaultfilters import date as _date
 from datetime import datetime
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializers import ContractSerializer
+from .serializers import *
 
 #
 class ContractView(APIView):
-    def get(self, request):
-        Contract1 = Contract.objects.all()
-        serializer = ContractSerializer(Contract1, many=True)
-        return Response({"Contract": serializer.data})
+    def get(self, request, userzign):
+        ContractSignObj = ContractSign.objects.get(SignKey = userzign)
+        contract = Contract.objects.get(pk = ContractSignObj.Contract.pk)
+        ApplicantPhone = ApplicantPhones.objects.get(Applicant = ContractSignObj.Contract.Applicant)
+        ApplicantEmail = ApplicantEmails.objects.get(Applicant = ContractSignObj.Contract.Applicant)
+        ApplicantPassp = ApplicantPassport.objects.get(Applicant = ContractSignObj.Contract.Applicant)
+        PageGreet = SuddopConstants.objects.get(SConstName = 'sms_sign_page_greeting')
+
+        SerializerContract = ContractSerializer(ContractSignObj.Contract, many=False)
+        ApplicantPhoneSerializer = ApplicantPhonesSerializer(ApplicantPhone, many=False)
+        ApplicantEmailSerializer = ApplicantEmailsSerializer(ApplicantEmail, many=False)
+        ApplicantPasspSerializer = ApplicantPassportSerializer(ApplicantPassp, many=False)
+        PageGreetSerializer = PageGreetingSerializer(PageGreet, many=False)
+        return Response({
+            "Contract": SerializerContract.data,
+            "ApplicantPhone" : ApplicantPhoneSerializer.data,
+            "ApplicantEmail" : ApplicantEmailSerializer.data,
+            "ApplicantPassp" : ApplicantPasspSerializer.data,
+            "PageGreet" : PageGreetSerializer.data,
+
+        })
 
 # Create your views here.
 def smssign(request, userzign):

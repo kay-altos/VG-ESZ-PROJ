@@ -21,7 +21,8 @@ from .views import ContractView
 #?P<>
 urlpatterns = [
     path('', views.smssign, name='smssign_view'),
-    path('ct/', ContractView.as_view()),
+    #path('ct/', ContractView.as_view()),
+    re_path(r'^ct/(?P<userzign>.+)/', ContractView.as_view()),
     re_path(r'^(?P<userzign>.+)/', views.smssign),
     #re_path(r'^send/(?P<userzign>[a-q]+)/(?P<contractzing>[a-q]+)/', views.smssign),
 ]

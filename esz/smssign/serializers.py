@@ -2,6 +2,10 @@ from rest_framework import serializers
 from suddop.models import *
 #serializers.Serializer
 #
+class CenterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Center
+        fields = '__all__'
 class ProgramSerializer(serializers.ModelSerializer):
     class Meta:
         model = Program

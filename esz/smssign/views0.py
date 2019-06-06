@@ -107,6 +107,17 @@ def smssign(request, userzign):
 #
     data = {
             'userzign' : userzign,
+            'page_greeting' : format_html(page_greeting.SConstValue),
+            'cce_program' : ContractSignObj.Contract.Program,
+            'cce_group' : cce_group,
+            'cce_stud' : ContractSignObj.Contract.Student,
+            'ContractObj' : ContractSignObj,
+            'ApplicantEmail' : ApplicantEmail,
+            'ApplicantPhone' : ApplicantPhone,
+            'ApplicantPassp' : ApplicantPassp,
+            'SmsCode' : ContractSignObj.SmsCode,
+            #'c_templ' : format_html(c_templ.templ),
+            'ContractSignTransactionState' : csitr.ContractSignTransactionState
     }
 #
     if request.method == 'POST' and request.is_ajax():
@@ -115,20 +126,47 @@ def smssign(request, userzign):
         '''приобразуем сырой запрос к utf-8'''
         body = json.loads(body_unicode)
         '''извлекаем json в dic'''
-        content = body['data']
-        model_contract = Contract.objects.get(pk = content['Contract']['id'])
-        model_applicant = Applicant.objects.get(pk = content['Contract']['applicant']['id'])
-        model_ApplicantPhone = ApplicantPhones.objects.get(Applicant = content['ApplicantPhone']['Applicant'])
-        
-
-        applicant_serializer = ApplicantSerializer(model_applicant, data=content['Contract']['applicant'])
-        serializer_ApplicantPhone = ApplicantPhonesSerializer(model_ApplicantPhone, data=content['ApplicantPhone'])
-        if serializer_ApplicantPhone.is_valid():
-            serializer_ApplicantPhone.save()
-
-        if applicant_serializer.is_valid():
-            applicant_serializer.save()
-
-            return JsonResponse({'result': applicant_serializer.data})
-
+        content = body['action']
+        if content == 'saveApplicantPasport':
+            applct = Applicant.objects.get(id = ContractSignObj.Contract.Applicant.id)
+            applct.FullName = body['FullName']
+            applct.ApplicantEmail = body['ApplicantEmail']
+            applct.ApplicantPhone = body['ApplicantPhone']
+            ApplicantPassp.ApplicantDocWhomWhenIssued = body['ApplicantDocWhomWhenIssued']
+            ApplicantPassp.ApplicantAddress = body['ApplicantAddress']
+            ApplicantPassp.SerialPaspDoc = body['SerialPaspDoc']
+            ApplicantPassp.NumPaspDoc = body['NumPaspDoc']
+            ApplicantPassp.DataOutDoc = body['DataOutDoc']
+            applct.ApplicantSnils = body['ApplicantSnils']
+            applct.save()
+            ApplicantPassp.save()
+            return JsonResponse({'oooo': '111'})
+        if content == 'saveStudent':
+            stdnt = Student.objects.get(id = ContractSignObj.Contract.Student.id)
+            stdnt.Name = body['Name']
+            stdnt.DateBirth = body['DateBirth']
+            stdnt.SeriaNumDoc = body['SeriaNumDoc']
+            stdnt.DatarRegDoc = body['DatarRegDoc']
+            stdnt.GenderLabel = body['GenderLabel']
+            stdnt.save()
+            return JsonResponse({'oooo': '111'})
+        if content == 'SendSmsSign':
+            cstrst = ContractSignTransactionState.objects.get(id=2)
+            csitr.ContractSignTransactionState =  cstrst
+            csitr.save()
+            rnd = random.randint(1000,9999)
+            msg = 'Для подписания договора № %s, используйте код: %s' % (ContractSignObj.Contract.Number, rnd)
+            send_sms_sign.delay(ApplicantPhone.Phone, msg, userzign, rnd)
+            return JsonResponse({'csts_id': cstrst.id, 'csts_lable' : cstrst.SatateLabel})
+        elif content == 'verifyCode':
+            if ContractSignObj.SmsCode == body['vsmsCode']:
+                Contr =  Contract.objects.get(id=ContractSignObj.Contract.id)
+                Contr.ContractStatus = ContractStatus.objects.get(id=2)
+                Contr.save()
+                cstrst = ContractSignTransactionState.objects.get(id=3)
+                csitr.ContractSignTransactionState = cstrst
+                csitr.save()
+                return JsonResponse({'csts_id': cstrst.id, 'csts_lable' : cstrst.SatateLabel})
+            else:
+                pass
     return render(request, "smssign/emailsign.html", context=data)

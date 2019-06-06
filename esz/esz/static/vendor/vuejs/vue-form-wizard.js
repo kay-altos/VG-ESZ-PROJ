@@ -526,7 +526,8 @@
                     staticClass: "wizard-btn",
                     attrs: {
                         tabindex: "-1",
-                        type: "button"
+                        type: "button",
+                        id:'ttt'
                     }
                 }, [t._t("default")], 2)
             },
@@ -745,7 +746,7 @@
                     attrs: {
                         disabled: t.loading
                     }
-                }, [t._v("\n            " + t._s(t.nextButtonText) + "\n           ")])], null, t.slotProps)], 2)], 2)], null, t.slotProps)], 2)])
+                }, [t._v("\n            " +  t._s(t.nextButtonText) + "\n           ")])], null, t.slotProps)], 2)], 2)], null, t.slotProps)], 2)])
             },
             i = [],
             r = {

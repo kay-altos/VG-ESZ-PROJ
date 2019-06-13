@@ -1,0 +1,60 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_static admin_modify %}
+{% block content %}
+<script type="text/javascript">
+  reload = function(){
+    window.location.href = window.location.href
+  }
+
+</script>
+<div id="content-main">
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% if form.non_field_errors|length > 0 %}
+      <p class="errornote">
+          "Please correct the errors below."
+      </p>
+      {{ form.non_field_errors }}
+    {% endif %}
+  <fieldset class="module aligned">
+		<div class="form-row">
+			<b>Договор №:&nbsp;</b>{{ cNumber }}
+		</div>
+		<div class="form-row">
+			<b>Заявитель:&nbsp;</b>{{ cApplicant }}
+		</div>
+		<div class="form-row">
+			<b>Дата договора:&nbsp;</b>{{ cDate }}
+		</div>
+    <div class="form-row">
+			<b>Телефон:&nbsp;</b> {{ cApplicantPhone }}
+    </div>
+    <div class="form-row">
+      <b>Электронная почта:&nbsp;</b> {{ сEmail }}
+    </div>
+
+		<div class="form-row">
+			<b>Стутас договора:&nbsp;</b>{{ сStatus }}
+		</div>
+
+    <div class="form-row">
+			<b>Стутас транзакции:&nbsp;</b> {{ cstrs.ContractSignTransactionState }}
+		</div>
+		<input type="hidden" id="id_name" name="contractId" value="{{ contract_id }}">
+
+	</fieldset>
+{{ rs }}
+    <div class="submit-row">
+      <input onclick="reload()" type="button" value="&#8635; Обновить" />
+			<a href="http://demo.contract.dvorec.net/admin/suddop/contract/">
+				<input type="button" value="&lArr; К списку договоров" />
+			</a>
+
+
+      <input type="submit" class="default" value="&#9993; Отправить"{% if cstrs.ContractSignTransactionState.id != 97  %} disabled {% endif %}>
+		</div>
+
+  </form>
+
+</div>
+{% endblock %}

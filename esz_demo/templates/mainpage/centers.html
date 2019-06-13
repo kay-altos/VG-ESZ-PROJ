@@ -1,0 +1,106 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="ru">
+	{% include "base/base/header.html" %}
+	<body>
+
+	<main role="main">
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div id="search-field">
+						<input class="form-control" type="text" placeholder="Search">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">{{ IndexPageTitle }}</h1>
+			</div>
+			<div class="container">
+				<p class="lead text-muted">{{ IndexPageSubTitle }}</p>
+			</div>
+		</section>
+		
+		<style>
+			figure {
+				width		: 100%;		/* Ширина области */
+				height		: 250px;	/* Высота области */
+				margin		: 0;		/* Обнуляем отступы */
+				margin-top	: 10px;		/* Обнуляем отступы */
+				overflow	: hidden;	/* Прячем всё за пределами */
+				min-width	: 250px;	/* Минимальная ширина */
+			}
+			
+			figure img {
+				width		: 100%;		  /* Ширина изображений */
+				margin		: -10% 0 0 0; /* Сдвигаем вверх */
+			}
+
+			.image {
+				position	: relative;
+				width		: 100%; /* for IE 6 */
+			}
+
+			h3 {
+				position	: absolute;
+				top			: 100px;
+				left		: 5px;
+				width		: 100%;
+			}
+			
+			h3 span {
+				color			: white;
+				font			: bold 24px/45px Helvetica, Sans-Serif;
+				letter-spacing	: -1px;
+				background		: rgb(0, 0, 0); /* на случай, если следующая строка не сработает */
+				background		: rgba(0, 0, 0, 0.7);
+				padding			: 10px;
+			}
+		</style>
+
+		<div class="album py-0 bg-light">
+			<div class="container">
+				<div class="row">
+				{% for c in centers %}
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<div class="image">
+								<figure>
+									<!-- <img src="http://dev.esz.dvorec.net/media/{{ c.Cat_photo }}" class="img-thumbnail" alt="Responsive image"> -->
+									<h3>
+										<span>{{ c.Name }}</span>
+									</h3>
+								</figure>
+							</div>
+							<div class="card-body">
+								<p class="card-text">{{ c.Address }}</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary" onclick="alert('Hello!')">Подробнее</button>
+										<!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
+									</div>
+									<!--<small class="text-muted">9 mins</small>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	{% include "base/base/footer.html" %}
+	</body>
+</html>

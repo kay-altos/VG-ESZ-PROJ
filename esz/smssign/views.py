@@ -61,8 +61,7 @@ def smssign(request, userzign):
     ApplicantPassp = ApplicantPassport.objects.get(Applicant = ContractSignObj.Contract.Applicant)
     page_greeting = SuddopConstants.objects.get(SConstName = 'sms_sign_page_greeting')
     cce_group = Group.objects.get(Program = ContractSignObj.Contract.Program)
-#
-#
+    #
     def contract_form_generate():
         c_templ = ContractTemplates.objects.get(id = '1')
         student_Birth = ContractSignObj.Contract.Student.DateBirth
@@ -92,12 +91,12 @@ def smssign(request, userzign):
 
         contr_name = '/var/www/html/esz/esz/static/tmpls/htmltplcontracts/%s.html' % (userzign)
         with open (contr_name, 'w') as f: f.write(new_data)
-        pdfkit.from_url('/var/www/html/esz/esz/static/tmpls/htmltplcontracts/%s.html' % (userzign), '/var/www/html/esz/esz/static/tmpls/out.pdf')
+        #pdfkit.from_url('/var/www/html/esz/esz/static/tmpls/htmltplcontracts/%s.html' % (userzign), '/var/www/html/esz/esz/static/tmpls/out.pdf')
         '''with open ('/var/www/html/esz/esz/static/tmpls/contr_tpl.mht', 'w') as f: f.write(new_data)
         pdfkit.from_url('/var/www/html/esz/esz/static/tmpls/contr_tpl.mhtl', '/var/www/html/esz/esz/static/tmpls/out.pdf')'''
 #
 
-    contract_form_generate()
+    #contract_form_generate()
 #
     if request.method == 'GET':
         if csitr.ContractSignTransactionState == ContractSignTransactionState.objects.get(id=98):
@@ -119,7 +118,7 @@ def smssign(request, userzign):
         model_contract = Contract.objects.get(pk = content['Contract']['id'])
         model_applicant = Applicant.objects.get(pk = content['Contract']['applicant']['id'])
         model_ApplicantPhone = ApplicantPhones.objects.get(Applicant = content['ApplicantPhone']['Applicant'])
-        
+
 
         applicant_serializer = ApplicantSerializer(model_applicant, data=content['Contract']['applicant'])
         serializer_ApplicantPhone = ApplicantPhonesSerializer(model_ApplicantPhone, data=content['ApplicantPhone'])
@@ -128,7 +127,7 @@ def smssign(request, userzign):
 
         if applicant_serializer.is_valid():
             applicant_serializer.save()
-
+            #contract_form_generate()
             return JsonResponse({'result': applicant_serializer.data})
 
     return render(request, "smssign/emailsign.html", context=data)

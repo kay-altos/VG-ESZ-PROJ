@@ -1,3 +1,7 @@
+.wrap-app-hide {
+display: none;
+
+}
 .modal-mask {
   position: fixed;
 

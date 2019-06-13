@@ -160,7 +160,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'esz/media')
 
 CORS_ORIGIN_ALLOW_ALL = True
 # REDIS related settings
-CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
 #CELERY_RESULT_BACKEND = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_TIMEZONE = 'Europe/Moscow'

@@ -315,6 +315,7 @@ class StudentDocsAdmin(admin.ModelAdmin):
     )
 #
 '''
+'''
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     form = StudentForm
@@ -325,6 +326,7 @@ class StudentAdmin(admin.ModelAdmin):
     )
     #inlines = [GenderInline, StudentDocsInline]
 #
+'''
 @admin.register(EducationForm)
 class EducationFormAdmin(admin.ModelAdmin):
     form = EducationFormForm

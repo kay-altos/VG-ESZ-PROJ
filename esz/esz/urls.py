@@ -25,6 +25,7 @@ urlpatterns = [
     path('test/', include('suddop.urls')),
     path('api/', include('smssign.urls')),
     path('smssign/', include('smssign.urls')),
+    path('sign/', include('sign.urls')),
 
 
 ]
